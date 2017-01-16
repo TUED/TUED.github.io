@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>iOS9新特性Storyboard References | Rookie`Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="References" />
+    
+    <meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS9新特性Storyboard References">
+<meta property="og:url" content="http://yoursite.com/2016/02/17/Storyboard-References/index.html">
+<meta property="og:site_name" content="Rookie`Blog">
+<meta property="og:description">
+<meta property="og:image" content="http://7xisto.com1.z0.glb.clouddn.com/gifblog_large_ios_automate_storyboard.jpg?imageView2/1/w/600/h/200">
+<meta property="og:updated_time" content="2016-12-08T11:01:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS9新特性Storyboard References">
+<meta name="twitter:description">
+    
+
+    
+        <link rel="alternate" href="/" title="Rookie`Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css" type="text/css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css" type="text/css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Always believe that something wonderful is about to happen</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo使用指南/">Hexo使用指南</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/iOS开发/">iOS开发</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/成长之路/">成长之路</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活感悟/">生活感悟</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js" type="text/javascript"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/iOS开发/">iOS开发</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Storyboard-References" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        iOS9新特性Storyboard References
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2016/02/17/Storyboard-References/" class="article-date">
+    <time datetime="2016-02-17T01:48:47.000Z" itemprop="datePublished">2016-02-17</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/References/">References</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="http://7xisto.com1.z0.glb.clouddn.com/gifblog_large_ios_automate_storyboard.jpg?imageView2/1/w/600/h/200"></p>
+<a id="more"></a>
+<blockquote>
+<p>现在想想还有点激动呢, 先说说为什么会这么激动呢?<br>最近在在开发项目中使用到Storyboard, 但是我们的项目管理是使用SVN(其实个人感觉使用Git在合并的时候xcode自带的diff功能还是很强大的, 可以再合并前进行调整修改, 其实SVN当然也可以diff,但是有些时候真的是搞得头大),还要进行多人协作, 看到这里有的人肯定会说你这个不是自己找不自在嘛! 现实情况也是这样的, 在两个人同时修改Storyboard的时候, 然后进行合并, 那么问题就会一大堆真的是一大堆,要么就是就是Storyboard各种错误(有的说不是删除爆红的地方就可以了吗, 但是删除了有些时候还是会各种开不开Storyboard), 要么就是Storyboard直接瘫痪了….  之前就有关注iOS9的新特性, 就是在使用Storyboard时候多人协作很方便, 但是没有关注, 最近看了一下, 简直就是爽歪歪了…..</p>
+</blockquote>
+<h3 id="为什么使用Storyboard呢?">为什么使用Storyboard呢?</h3><p>其实如果是一个中大型的项目, 使用Storyboard时候其实看起来反而会很头疼,因为各种segue, 看的都头疼了. 所以就想能不能把Storyboard拆分一下呢.. 其实也有类似的解决方案 <a href="https://github.com/rob-brown/RBStoryboardLink" target="_blank" rel="external">RBStoryboardLink</a> (可以看看这个是什么) 但是这样就是失去Storyboard的原有的本质, 有些很直观的逻辑一下就断掉了. 那和xib又有什么区别呢?</p>
+<p>这里我也不多说了. 各有优缺点, 可以看看—<a href="http://onevcat.com/2013/12/code-vs-xib-vs-storyboard/" target="_blank" rel="external">代码手写UI，xib和StoryBoard间的博弈，以及Interface Builder的一些小技巧</a> 有些内容有些老了. 请自行更新吧 … 不过有些小技巧很实用的呢….. </p>
+<p>不过我个人看来现在的Storyboard简直就是神器了(segue, AutoALayout,良好的团队协作,可重用)….. 专治各种不服….</p>
+<h3 id="重点来了—Storyboard_References">重点来了—Storyboard References</h3><p>直接上Demo  </p>
+<ol>
+<li>比如我原来的Storyboard的界面是这样样子的<br><img src="http://7xisto.com1.z0.glb.clouddn.com/gifWeChat_1455678316.jpeg"></li>
+</ol>
+<p>我们想把第一个VC的后面的试图进行拆分怎么办呢</p>
+<ul>
+<li>首先选中我们要进行拆分的试图</li>
+<li>然后Editor – Refactor to Storyboard</li>
+</ul>
+<p><img src="http://7xisto.com1.z0.glb.clouddn.com/gif08368378-9CA0-44DD-B46A-74C42B9393D4.png"></p>
+<ul>
+<li><p>然后给你拆分的Storyboard进行命名. 这里我就FirstSB.storyboard了<br><img src="http://7xisto.com1.z0.glb.clouddn.com/gif711D5C00-A730-4CAA-B538-15E3E3E8928C.png"></p>
+</li>
+<li><p>拆分之后变成了这个样纸….发现你的工程里面多一个FirstSB.storyboard文件,打开是这样样纸的, 然后发现里面的试图就是我们之前选择合并的试图了, 这样我们就可以在这里面为所欲为了….</p>
+</li>
+</ul>
+<p><img src="http://7xisto.com1.z0.glb.clouddn.com/gifEAE1381F-B940-4966-AC13-3C508B978FF6.png"></p>
+<ul>
+<li>而主视图就变成这个样子了, 多了一个FirstSB的Storyboard References控件了</li>
+</ul>
+<p><img src="http://7xisto.com1.z0.glb.clouddn.com/gifEE2C793F-A243-4EF8-B649-42797AA2BD5D.png"></p>
+<p>这样我们就把主视图上的一些复杂的东西给拆分出来了…. 是不是很简单的呢</p>
+<h3 id="试图的合并">试图的合并</h3><ul>
+<li>对于以前已经拆分在各个StoryBorad文件里的兄弟们，可以通过添加Storyboard References来链接进行添加合并</li>
+</ul>
+<p>我这里再新建了一个工程, 并生成了一个OtherVC.storyboard的文件, 然后拖进我自己的工程中, 来模拟合并的过程.<br><img src="http://7xisto.com1.z0.glb.clouddn.com/gifD81FE6F2-EE17-42CE-BC2B-BCB2D439C994.png"></p>
+<ul>
+<li>比如我们想把这个页面想让第三个vc来push进来. 我们在主视图中新建个拖拽一个Button. 然后在拖拽一个 Storyboard References控件,然后进行关联</li>
+</ul>
+<p><img src="http://7xisto.com1.z0.glb.clouddn.com/gif9F8CAA01-78A3-49FA-A6AD-D3C80FEC3B8F.png"></p>
+<ul>
+<li>然后在给OtherVC.storyboard设置一个storyboard ID , 我这里设置他为pushOtherVC</li>
+</ul>
+<p><img src="http://7xisto.com1.z0.glb.clouddn.com/gif34C4A423-277D-4217-A410-73FE2E910C85.png"></p>
+<ul>
+<li>最后对main.storyboard的Storyboard References进行关联, </li>
+<li>在Storyboard中选择我们刚刚的OtherVC</li>
+<li>Referenced ID 设置成我们刚刚给OtherVCC 设置的storyboard ID  , 也即是就是pushOtherVC</li>
+</ul>
+<p><img src="http://7xisto.com1.z0.glb.clouddn.com/gif6A48A1FD-CA00-47E3-8697-4B882FFF7F49.png"></p>
+<p>亲测,OK了, 如果有兴趣的可以搞搞啊.. 这个无论我们用SVN还是git, 使用起来都很方便, 而且逻辑清晰. 棒棒哒..<br>我的公众账号 … 不时会更新一些小姿势…希望关注一些啊  …<br><img src="http://7xisto.com1.z0.glb.clouddn.com/qrcode_for_gh_17c8b4e90d30_1280.jpg?imageView2/1/w/300/h/300"></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2016/02/17/Storyboard-References/" data-id="ciy061u4v0020e2wikjmf8bep" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/12/05/xcodelins/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            统计整个Xcode工程代码行数
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2015/12/24/StaticLibary/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">iOS中静态库-.a文件生成和使用</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/13/aboutuploadAppstoreProblem/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/1F91FE85-B2FC-46A2-B73D-6652DFAD856D.png?imageView2/1/w/600/h/200)" alt="上传 Appstore 错误 - ERROR ITMS-90168" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/12/13/aboutuploadAppstoreProblem/" class="title">上传 Appstore 错误 - ERROR ITMS-90168</a></p>
+                            <p class="item-date"><time datetime="2016-12-13T01:24:31.000Z" itemprop="datePublished">2016-12-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/05/lookmoviewforyousname/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/lookmoviewforyousname1.png?imageView2/1/w/600/h/200)" alt="你的名字观后感" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/生活感悟/">生活感悟</a></p>
+                            <p class="item-title"><a href="/2016/12/05/lookmoviewforyousname/" class="title">你的名字观后感</a></p>
+                            <p class="item-date"><time datetime="2016-12-05T14:52:48.000Z" itemprop="datePublished">2016-12-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/05/xcodelins/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/xcodelins.png?imageView2/1/w/600/h/200)" alt="统计整个Xcode工程代码行数" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/12/05/xcodelins/" class="title">统计整个Xcode工程代码行数</a></p>
+                            <p class="item-date"><time datetime="2016-12-05T06:20:48.000Z" itemprop="datePublished">2016-12-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/17/Storyboard-References/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/gifblog_large_ios_automate_storyboard.jpg?imageView2/1/w/600/h/200)" alt="iOS9新特性Storyboard References" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/02/17/Storyboard-References/" class="title">iOS9新特性Storyboard References</a></p>
+                            <p class="item-date"><time datetime="2016-02-17T01:48:47.000Z" itemprop="datePublished">2016-02-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2015/12/24/StaticLibary/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/F0093439-EBF0-40F1-B810-6D7BF25B7D9B.png?imageView2/1/w/600/h/200)" alt="iOS中静态库-.a文件生成和使用" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2015/12/24/StaticLibary/" class="title">iOS中静态库-.a文件生成和使用</a></p>
+                            <p class="item-date"><time datetime="2015-12-24T14:45:18.000Z" itemprop="datePublished">2015-12-24</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo使用指南/">Hexo使用指南</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/成长之路/">成长之路</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Appstore/">Appstore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CoreData/">CoreData</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DLNA/">DLNA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git的使用/">Git的使用</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/References/">References</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/block的使用/">block的使用</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS优化/">iOS优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS常用宏/">iOS常用宏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios-调试/">ios 调试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/你的名字/">你的名字</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客介绍/">博客介绍</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客使用/">博客使用</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际化/">国际化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/声波传输/">声波传输</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多线程/">多线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源库和第三方/">开源库和第三方</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自动布局/">自动布局</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态库/">静态库</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Appstore/" style="font-size: 10px;">Appstore</a> <a href="/tags/CoreData/" style="font-size: 10px;">CoreData</a> <a href="/tags/DLNA/" style="font-size: 10px;">DLNA</a> <a href="/tags/Git的使用/" style="font-size: 15px;">Git的使用</a> <a href="/tags/References/" style="font-size: 10px;">References</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/block的使用/" style="font-size: 10px;">block的使用</a> <a href="/tags/iOS优化/" style="font-size: 10px;">iOS优化</a> <a href="/tags/iOS常用宏/" style="font-size: 10px;">iOS常用宏</a> <a href="/tags/ios-调试/" style="font-size: 10px;">ios 调试</a> <a href="/tags/你的名字/" style="font-size: 10px;">你的名字</a> <a href="/tags/动画/" style="font-size: 10px;">动画</a> <a href="/tags/博客介绍/" style="font-size: 10px;">博客介绍</a> <a href="/tags/博客使用/" style="font-size: 20px;">博客使用</a> <a href="/tags/国际化/" style="font-size: 10px;">国际化</a> <a href="/tags/声波传输/" style="font-size: 10px;">声波传输</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/开源库和第三方/" style="font-size: 10px;">开源库和第三方</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/自动布局/" style="font-size: 10px;">自动布局</a> <a href="/tags/静态库/" style="font-size: 10px;">静态库</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Rookie</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2016/02/17/Storyboard-References/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
+</html>
