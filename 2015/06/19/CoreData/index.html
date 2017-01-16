@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>CoreData的使用 | Rookie`Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="CoreData" />
+    
+    <meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CoreData的使用">
+<meta property="og:url" content="http://yoursite.com/2015/06/19/CoreData/index.html">
+<meta property="og:site_name" content="Rookie`Blog">
+<meta property="og:description">
+<meta property="og:image" content="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog82FCE919-B434-43E7-9431-CAD40B1B9C43.png?imageView2/1/w/600/h/200">
+<meta property="og:updated_time" content="2015-09-30T10:21:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CoreData的使用">
+<meta name="twitter:description">
+    
+
+    
+        <link rel="alternate" href="/" title="Rookie`Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css" type="text/css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css" type="text/css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Always believe that something wonderful is about to happen</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo使用指南/">Hexo使用指南</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/iOS开发/">iOS开发</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/成长之路/">成长之路</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活感悟/">生活感悟</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js" type="text/javascript"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/iOS开发/">iOS开发</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-CoreData" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        CoreData的使用
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2015/06/19/CoreData/" class="article-date">
+    <time datetime="2015-06-19T09:09:41.000Z" itemprop="datePublished">2015-06-19</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CoreData/">CoreData</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog82FCE919-B434-43E7-9431-CAD40B1B9C43.png?imageView2/1/w/600/h/200"><br><a id="more"></a></p>
+<h3 id="CoreData_是什么?">CoreData 是什么?</h3><ul>
+<li>Core Data 是一个模型层的技术。Core Data 帮助你建立代表程序状态的模型层。Core Data 也是一种持久化技术，它能将模型对象的状态持久化到磁盘，但它最重要的特点是：Core Data 不仅是一个加载、保存数据的框架，它还能和内存中的数据很好的共事</li>
+<li>Core Data是iOS5之后才出现的一个框架，它提供了对象-关系映射(ORM)的功能，即能够将OC对象转化成数据，保存在SQLite数据库文件中，也能够将保存在数据库中的数据还原成OC对象。在此数据操作期间，我们不需要编写任何SQL语句.</li>
+</ul>
+<h3 id="CoreData_基本概念">CoreData 基本概念</h3><ul>
+<li><p>托管对象（managed object）<br>一个托管对象代表你想要保存到数据存储中的一个对象。这在概念上类似于SQL中的一条记录， 并且通常也包含一些域，这些域对应于你想要保存的对象的属性。</p>
+</li>
+<li><p>数据存储（data store）<br>Core Data支持4中类型的数据存储：SQLiteStore, XMLStore, BinaryStore, InMemoryStore。</p>
+</li>
+<li><p>托管对象上下文(managed object context)<br>托管对象上下文类似于应用程序和数据存储之间的一块缓冲区。这块缓冲区包含所有未被写入数据存储的托管对象。你可以添加、删除、更改缓冲区内的托管对象。在很多时候，当你需要读、插入、删除对象时，你将会调用托管对象上下文的方法。<br><code>操作实际内容 作用：插入数据  查询  更新  删除</code></p>
+</li>
+<li><p>持久化存储协调器（persistent store coordinator）<br>持久化存储协调器处理到数据存储的连接，并且包含一些底层信息，像用到数据存储的名字和位置。这个类通常被托管对象上下文用到。<br><code>NSPersistentStoreCoordinator(持久化存储助理) 相当于数据库的连接器</code></p>
+</li>
+<li>托管对象模型(managed object model)<br>托管对象模型是一个类，这个类包含每一个你想存储到数据存储中的托管对象的定义。<br><code>NSManagedObjectModel(被管理的对象模型)相当于实体，不过它包含 了实体间的关系</code></li>
+</ul>
+<p>这里有我写的一个简单的Dmeo <a href="http://pan.baidu.com/s/1o6iO6AA" target="_blank" rel="external">http://pan.baidu.com/s/1o6iO6AA</a> <a href="http://pan.baidu.com/s/1o6iO6AA" target="_blank" rel="external">这里下载</a>提取码 <strong><em>3k2z</em></strong> , 有兴趣的可以自己下载来看..<br>这个 Demo 主要讲的是 CoreData 的原理上的问题, 利用NSManagedObjectContext来实现增删改查等基本的原来,用起来不够整洁方便, 看起来也过于繁琐! <strong><em>下面我们来看一个比现在这个看起来相对简单的Demo, 然后流程我也会讲到!</em></strong></p>
+<h3 id="CoreData_的使用">CoreData 的使用</h3><ul>
+<li><p>首先我们先创建两个实体 <strong><em>PeopleInfo</em></strong> 和 <strong><em>CarInfo</em></strong><br>PeopleInfo实体中有: name , age , sex 三个属性<br>CarInfo实体中有: carName, carAge  两个属性</p>
+</li>
+<li><p>然后建立 <strong><em>PeopleInfo</em></strong> 和 <strong><em>CarInfo</em></strong>的关联关系<br>我这里的关系是一个人可以有很多辆汽车<br><strong><em>PeopleInfo</em></strong> 的属性和关系表<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlogcoreData1.png"></p>
+</li>
+</ul>
+<p><strong><em>CarInfo</em></strong> 的属性和关系表<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlogCoreData2.png"></p>
+<ul>
+<li>接着生成Model类<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog1111.png"><br>Editor-&gt;&gt;Create NSManagedObject Subciass..<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog2222.png"><br>这里你们应该只有一个,在没有升级的情况下,那么就选定一个就可以了<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog3333.png"><br>这里可以两个一起生成, 编译如果有错误, 那么就重新生成一次,将原来的覆盖即可;(因为 Xcode 有时候会抽风)</li>
+</ul>
+<ul>
+<li><p>接着写一个ManageData管理的单利类,用来管理NSManagedObjectContext的一些增删改查的操作<br>这个单利的作用是对 CoreData 数据库的创建, 数据的增删改查等等一些操作<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog977850D3-78F9-458D-BCD6-FF89EE85B55B.png"><br>对数据的创建, 并且新建一个NSManagedObjectContext,供整个单利来使用</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setupManaegdObjectContext&#123;</span><br><span class="line">    <span class="built_in">NSURL</span> *paths = [[[<span class="built_in">NSFileManager</span> defaultManager] URLsForDirectory:<span class="built_in">NSDocumentDirectory</span> inDomains:<span class="built_in">NSUserDomainMask</span>] lastObject];</span><br><span class="line">    <span class="built_in">NSURL</span> *storeURL = [paths URLByAppendingPathComponent:<span class="string">@"text.sqlite"</span>];</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.managedObjectContext</span> = [[<span class="built_in">NSManagedObjectContext</span> alloc] initWithConcurrencyType:<span class="built_in">NSMainQueueConcurrencyType</span>];</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.managedObjectContext</span><span class="variable">.persistentStoreCoordinator</span> = [[<span class="built_in">NSPersistentStoreCoordinator</span> alloc] initWithManagedObjectModel:[<span class="built_in">NSManagedObjectModel</span> mergedModelFromBundles:<span class="literal">nil</span>]];</span><br><span class="line">    <span class="built_in">NSError</span> *error;</span><br><span class="line">    <span class="built_in">NSDictionary</span> *options = [<span class="built_in">NSDictionary</span> dictionaryWithObjectsAndKeys:</span><br><span class="line">                             [<span class="built_in">NSNumber</span> numberWithBool:<span class="literal">YES</span>],<span class="built_in">NSMigratePersistentStoresAutomaticallyOption</span>,[<span class="built_in">NSNumber</span> numberWithBool:<span class="literal">YES</span>],<span class="built_in">NSInferMappingModelAutomaticallyOption</span>,<span class="literal">nil</span>];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.managedObjectContext</span><span class="variable">.persistentStoreCoordinator</span> addPersistentStoreWithType:<span class="built_in">NSSQLiteStoreType</span> configuration:<span class="literal">nil</span> URL:storeURL options:options error:&amp;error];</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"setupManagedObjectContextError: %@"</span>, error);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.managedObjectContext</span><span class="variable">.undoManager</span> = [[<span class="built_in">NSUndoManager</span> alloc] init];</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接下来我们对我们要操作的实体类来添加一个Category(类目)<br>我们用这个类目来对整个实体类中得数据来进行操作, 比如在这里实体类中添加数据, 改变数据,删除数据等等, <code>之所以我们在这里用一个类目来扩展这个实体类是因为我们要升级原有的实体类,所以这些操作要在这个类的类目中来进行</code><br>这里我们针对PeopleInfo实体来新建一个类目<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlogE3371886-865D-4723-82B8-5588ED0E8F59.png"></p>
+<p><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlogD15881DB-6F7E-47C3-B973-29EA8E632C99.png"></p>
+<p><code>Categray(类目)有什么作用呢</code><br>1.为没有源代码的类添加方法,因为我们拿不到源代码,所以不能添加实例变量但可以添加方法<br>2.具体操作:在相应的.h文件里声明,在.m文件里实现 声明和实现与其他普通的类一样<br>3.具体格式:在.h文件里 @interface 需要扩展的类名(NSString) (扩展类名)开头 @end结束 在.m文件里以:@implementation 需要扩展的类名(NSString) (扩展类名) @end结束<br>4.在main.m文件里的调用和其他方法一样<br><code>延展有什么作用呢</code><br>主要是为有源代码的类添加实例方法或对象 内容私有只在.m文件里实现,不进行声明.<br>1.在.m文件里的开头之前添加@interface 类名 (延展类名){添加实例变量和方法}@end结束<br>2.在.m文件的实现部分对延展里面的方法进行实现</p>
+</li>
+<li><p>在PeopleInfo类目中写方添加一条数据的方法并实现<br>在.h中写方法</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (PeopleInfo <span class="keyword">*</span>)addSomeDataManagedObjectContext:(NSManagedObjectContext <span class="keyword">*</span>)context WhitName:(NSString <span class="keyword">*</span>)name WhitSex:(NSString<span class="keyword">*</span>)sex WhitAge:(NSString <span class="keyword">*</span>)age;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在.m中实现方法<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">+ (PeopleInfo *)addSomeDataManagedObjectContext:(<span class="built_in">NSManagedObjectContext</span> *)context WhitName:(<span class="built_in">NSString</span> *)name WhitSex:(<span class="built_in">NSString</span> *)sex WhitAge:(<span class="built_in">NSString</span> *)age</span><br><span class="line">&#123;</span><br><span class="line">    PeopleInfo *peo = <span class="literal">nil</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSFetchRequest</span> *request = [<span class="built_in">NSFetchRequest</span> fetchRequestWithEntityName:<span class="string">@"PeopleInfo"</span>];</span><br><span class="line">    request<span class="variable">.predicate</span> = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"age == %@"</span>, peo<span class="variable">.age</span>];</span><br><span class="line">    <span class="built_in">NSError</span> *error = <span class="literal">nil</span>;</span><br><span class="line">    <span class="built_in">NSArray</span> *matches = [context executeFetchRequest:request error:&amp;error];</span><br><span class="line">    <span class="keyword">if</span> (!matches||[matches count] &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (![matches count]) &#123;</span><br><span class="line">            peo = [<span class="built_in">NSEntityDescription</span> insertNewObjectForEntityForName:<span class="string">@"PeopleInfo"</span> inManagedObjectContext:context];</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            peo = [matches lastObject];</span><br><span class="line">        &#125;</span><br><span class="line">        peo<span class="variable">.name</span> = name;</span><br><span class="line">        peo<span class="variable">.age</span> = age;</span><br><span class="line">        peo<span class="variable">.sex</span> = sex;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> peo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>在单利ManageData中利用NSManagedObjectContext来添数据</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="typename">void</span>)<span class="string">addDataWhitName:</span>(NSString *)name <span class="string">WhitSex:</span>(NSString*)sex <span class="string">WhitAge:</span>(NSString *)age&#123;</span><br><span class="line">    [PeopleInfo <span class="string">addSomeDataManagedObjectContext:</span>self.managedObjectContext <span class="string">WhitName:</span>name <span class="string">WhitSex:</span>sex <span class="string">WhitAge:</span>age];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后在ViewController中调用添加数据的方法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr_selector">[[ManageData shareInstance]</span> <span class="tag">addDataWhitName</span><span class="pseudo">:self</span><span class="class">.nameTextField</span><span class="class">.text</span> <span class="tag">WhitSex</span><span class="pseudo">:self</span><span class="class">.sexTextField</span><span class="class">.text</span> <span class="tag">WhitAge</span><span class="pseudo">:self</span><span class="class">.ageTextField</span><span class="class">.text</span>];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在这里我只写了添加的一个操作, 剩余的操作请大家<a href="http://pan.baidu.com/s/1pJvDGM3" target="_blank" rel="external">下载Demo</a></p>
+<h3 id="CoreData_升级-版本升级">CoreData 升级-版本升级</h3><ul>
+<li>升级分为两种,第一种是简单的升级, 在原来的基础上添加字段属性的.另外一种是比较复杂的操作,修改原来数据表的字段的名字或者属性. <h2 id="添加字段属性升级">添加字段属性升级</h2></li>
+<li>如果您的APP已经上架,那么我们的CoreData 数据表不能进行操作, 否则就会有各种奇葩的错误, 如果我们想进行数据表的操作首先我们应该在原来的基础上进行升级, 然后再操作, 完成后再把我们的 CoreData 的 Model Version选择到我们已经升级的版本即可;</li>
+<li>选择要升级的版本进行升级<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlogD06A804C-0F69-48CE-ABAD-ECA979532D40.png"><br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog558A151A-B4D6-4834-A3B6-46A02646A2C8.png"></li>
+<li>升级完成后可以在新的表中添加新的字段什么的都可以, </li>
+<li>升级完成, 选择版本<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog715558BF-0F75-42FD-AF07-7909C6E9C376.png"></li>
+<li>升级完成后再生成 Model 等文件, 和刚才的操作步骤一样<h2 id="修改原来字段名字操作">修改原来字段名字操作</h2></li>
+<li>首先也是要升级一个新的版本(同上升级新), 在修改原有字段的名字<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlogFE009721-D88F-436D-8371-596E994AF24C.png"></li>
+<li>升级完成后再生成 Model 等文件, 和刚才的操作步骤一样</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2015/06/19/CoreData/" data-id="ciy061u0x0000e2wi80pqhriy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2015/06/26/iOS-Coding-standards/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Objective-C 编码规范
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2015/05/27/PureLayout/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">使用PureLayout进行自动布局</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/13/aboutuploadAppstoreProblem/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/1F91FE85-B2FC-46A2-B73D-6652DFAD856D.png?imageView2/1/w/600/h/200)" alt="上传 Appstore 错误 - ERROR ITMS-90168" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/12/13/aboutuploadAppstoreProblem/" class="title">上传 Appstore 错误 - ERROR ITMS-90168</a></p>
+                            <p class="item-date"><time datetime="2016-12-13T01:24:31.000Z" itemprop="datePublished">2016-12-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/05/lookmoviewforyousname/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/lookmoviewforyousname1.png?imageView2/1/w/600/h/200)" alt="你的名字观后感" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/生活感悟/">生活感悟</a></p>
+                            <p class="item-title"><a href="/2016/12/05/lookmoviewforyousname/" class="title">你的名字观后感</a></p>
+                            <p class="item-date"><time datetime="2016-12-05T14:52:48.000Z" itemprop="datePublished">2016-12-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/05/xcodelins/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/xcodelins.png?imageView2/1/w/600/h/200)" alt="统计整个Xcode工程代码行数" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/12/05/xcodelins/" class="title">统计整个Xcode工程代码行数</a></p>
+                            <p class="item-date"><time datetime="2016-12-05T06:20:48.000Z" itemprop="datePublished">2016-12-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/17/Storyboard-References/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/gifblog_large_ios_automate_storyboard.jpg?imageView2/1/w/600/h/200)" alt="iOS9新特性Storyboard References" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/02/17/Storyboard-References/" class="title">iOS9新特性Storyboard References</a></p>
+                            <p class="item-date"><time datetime="2016-02-17T01:48:47.000Z" itemprop="datePublished">2016-02-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2015/12/24/StaticLibary/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/F0093439-EBF0-40F1-B810-6D7BF25B7D9B.png?imageView2/1/w/600/h/200)" alt="iOS中静态库-.a文件生成和使用" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2015/12/24/StaticLibary/" class="title">iOS中静态库-.a文件生成和使用</a></p>
+                            <p class="item-date"><time datetime="2015-12-24T14:45:18.000Z" itemprop="datePublished">2015-12-24</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo使用指南/">Hexo使用指南</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/成长之路/">成长之路</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Appstore/">Appstore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CoreData/">CoreData</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DLNA/">DLNA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git的使用/">Git的使用</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/References/">References</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/block的使用/">block的使用</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS优化/">iOS优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS常用宏/">iOS常用宏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios-调试/">ios 调试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/你的名字/">你的名字</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客介绍/">博客介绍</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客使用/">博客使用</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际化/">国际化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/声波传输/">声波传输</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多线程/">多线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源库和第三方/">开源库和第三方</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自动布局/">自动布局</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态库/">静态库</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Appstore/" style="font-size: 10px;">Appstore</a> <a href="/tags/CoreData/" style="font-size: 10px;">CoreData</a> <a href="/tags/DLNA/" style="font-size: 10px;">DLNA</a> <a href="/tags/Git的使用/" style="font-size: 15px;">Git的使用</a> <a href="/tags/References/" style="font-size: 10px;">References</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/block的使用/" style="font-size: 10px;">block的使用</a> <a href="/tags/iOS优化/" style="font-size: 10px;">iOS优化</a> <a href="/tags/iOS常用宏/" style="font-size: 10px;">iOS常用宏</a> <a href="/tags/ios-调试/" style="font-size: 10px;">ios 调试</a> <a href="/tags/你的名字/" style="font-size: 10px;">你的名字</a> <a href="/tags/动画/" style="font-size: 10px;">动画</a> <a href="/tags/博客介绍/" style="font-size: 10px;">博客介绍</a> <a href="/tags/博客使用/" style="font-size: 20px;">博客使用</a> <a href="/tags/国际化/" style="font-size: 10px;">国际化</a> <a href="/tags/声波传输/" style="font-size: 10px;">声波传输</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/开源库和第三方/" style="font-size: 10px;">开源库和第三方</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/自动布局/" style="font-size: 10px;">自动布局</a> <a href="/tags/静态库/" style="font-size: 10px;">静态库</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Rookie</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2015/06/19/CoreData/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
+</html>

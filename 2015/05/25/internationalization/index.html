@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>iOS 国际化 | Rookie`Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="国际化" />
+    
+    <meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 国际化">
+<meta property="og:url" content="http://yoursite.com/2015/05/25/internationalization/index.html">
+<meta property="og:site_name" content="Rookie`Blog">
+<meta property="og:description">
+<meta property="og:image" content="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog2.png?imageView2/1/w/600/h/200">
+<meta property="og:updated_time" content="2015-09-30T10:21:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 国际化">
+<meta name="twitter:description">
+    
+
+    
+        <link rel="alternate" href="/" title="Rookie`Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css" type="text/css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css" type="text/css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Always believe that something wonderful is about to happen</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo使用指南/">Hexo使用指南</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/iOS开发/">iOS开发</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/成长之路/">成长之路</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/生活感悟/">生活感悟</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js" type="text/javascript"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/iOS开发/">iOS开发</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-internationalization" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        iOS 国际化
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2015/05/25/internationalization/" class="article-date">
+    <time datetime="2015-05-25T04:20:47.000Z" itemprop="datePublished">2015-05-25</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国际化/">国际化</a></li></ul>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog2.png?imageView2/1/w/600/h/200"><br><a id="more"></a></p>
+<h2 id="国际化_vs_本地化">国际化 vs 本地化</h2><p>（Internationalization vs Localization）</p>
+<p>简单说，国际化是一个应用程序国际兼容性设计的过程，比如：</p>
+<ol>
+<li>以用户母语处理文本输入和输出；</li>
+<li>处理不同的日期、时间以及数字格式；</li>
+<li>利用适当的历法和时区处理数据；<br>国际化是一项你和开发者通过利用系统提供的API来实现的活动，并在代码上做一些补充和修改，从而让应用的中文版、阿拉伯语版本和英文版一样好。</li>
+</ol>
+<p>相比之下，本地化仅仅是把应用的用户界面和资源翻译成不同的语言，这是你可以也应该交给别人做的工作，除非你能精通app应该支持的每种语言。<br><code>使用本地国际化还有一个好处就是在你的程序中许多字符串命名都可以放在Localizable.strings中</code><br><code>在字符串命名的时候只需要调用一个 key 就可以进行赋值,这样可以方便集中管理字符串!</code></p>
+<p>多语言在应用程序中一般有两种做法：</p>
+<ul>
+<li>程序中提供给用户自己选择的机会；</li>
+<li>根据当前用户当前移动设备的语言自动将我们的app切换对应语言。</li>
+</ul>
+<p>第一种做法比较简单完全靠自己的发挥了，这里主要讲第二种做法，主要分一下几点：</p>
+<ol>
+<li>本地化应用程序名称</li>
+<li>本地化字符串</li>
+<li>本地化图片</li>
+<li>本地化其他文件</li>
+</ol>
+<h2 id="本地化字符串">本地化字符串</h2><ol>
+<li>创建国际化语言文件：文件名必须为：Localizable.strings<br><code>这里如果不使用这个名字来命名,如果你使用的是自定义名字的.strings，比如MyApp.strings，</code><br><code>那么你在程序中可以这样获取字符串：NSLocalizedStringFromTable (@&quot;mykey&quot;,@&quot;MyApp&quot;, nil)</code><br><code>这样即可获取到&quot;myvalue&quot;这个字符串，可以是任何语言。</code><br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog4.png?imageView2/1/w/600/h/400"></li>
+<li>选中Localizable.strings文件，在Utilites中，点击Localizable选项<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog5.png?imageView2/1/w/600/h/400"></li>
+<li>创建English语言包。<br>创建后，你的Localizable.strings文件下将挂在英文的语言支持文件。<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog6.png?imageView2/1/w/600/h/400"></li>
+<li>根据需要添加其他多国语言支持。<br><img src="http://7xisto.com1.z0.glb.clouddn.com/RookieBlog3.png?imageView2/1/w/600/h/400"></li>
+</ol>
+<p><strong><em>添加语言支持。</em></strong><br>我们以我的文件为例：<br>在Localizable.strings(Chinese(Simplified))中，加入如下代码：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"play"</span>=<span class="string">"播放"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>在Localizable.strings(English)中，加入如下代码：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"play"</span>=<span class="string">"play"</span>;</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>使用语言支持</em></strong><br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span><span class="variable">.textButton</span> setTitle:<span class="built_in">NSLocalizedString</span>(<span class="string">@"play"</span>,<span class="string">@""</span>) forState:<span class="built_in">UIControlStateNormal</span>];</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>获得当前设备的语言</em></strong></p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 取得用户默认信息</span></span><br><span class="line">    <span class="built_in">NSUserDefaults</span> *defaults = [ <span class="built_in">NSUserDefaults</span> standardUserDefaults ];</span><br><span class="line"><span class="comment">// 取得 iPhone 支持的所有语言设置</span></span><br><span class="line"><span class="built_in">NSArray</span> *languages = [defaults objectForKey : <span class="string">@"AppleLanguages"</span> ];</span><br><span class="line"><span class="built_in">NSLog</span> (<span class="string">@"%@"</span>, languages);</span><br><span class="line">    </span><br><span class="line"><span class="comment">// 获得当前iPhone使用的语言</span></span><br><span class="line"><span class="built_in">NSString</span>* currentLanguage = [languages objectAtIndex:<span class="number">0</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"当前使用的语言：%@"</span>,currentLanguage);</span><br></pre></td></tr></table></figure>
+<h2 id="本地化应用程序名称">本地化应用程序名称</h2><ol>
+<li>点击“new file”然后在弹出窗口左侧选择IOS的resource项，在右侧就可以看到“String File”的图标。创建这个文件，命名为“InfoPlist”（一定是这个文件名） 就生成一个InfoPlist.strings文件；</li>
+<li>选中InfoPlist.strings 点击 XCode-&gt; View-&gt; Utilities -&gt; File Inspector,在Localization中点“+”，添加chinese （zh－Hans）类型的为简体中文，english 应该会自动添加上。然后在InfoPlish.strings 左边会多出一个三角形，点击展开后可以看到InfoPlish.strings(english)和InfoPlish.strings(chinese)两个版本的文件；</li>
+<li>在InfoPlish.strings(english)文件中加入： <figure class="highlight"><figcaption><span>="Program";  ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20854;&#20013;&#8220;Program&#8221;&#20026;&#33521;&#25991;&#24212;&#29992;&#31243;&#24207;&#21517;&#31216;&#65292;&#21516;&#29702;&#22312;InfoPlish.strings(chinese)&#25991;&#20214;&#20013;&#21152;&#20837;&#65306;&#10;    ```CFBundleDisplayName =&#34;&#24212;&#29992;&#31243;&#24207;&#34;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><code>其中“应用程序”为中文名称，注意：CFBundleDisplayName加不加双引号都行</code></p>
+<ol>
+<li>编辑Info.plist，添加一个新的属性Application has localized display name, 设置其类型为boolean，并将其value设置为YES即可</li>
+</ol>
+<h2 id="本地化图片">本地化图片</h2><p>这里又分两种方法，第一种和本地化字符串方法类似，把中英文图片的名字分别存到中英文对应的strings文件，然后通过NSLocalizedString)来获取图片名称，如：</p>
+<p>Localizable.strings(english)文件中加入：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"BtnCancel"</span>=<span class="string">"BtnCancelEn.png"</span>;</span><br></pre></td></tr></table></figure>
+<p>Localizable.strings(chinese)文件中加入：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"BtnCancel"</span>=<span class="string">"BtnCancelCn.png"</span>;</span><br></pre></td></tr></table></figure>
+<p>然后在代码中使用NSLocalizedString)来获取图片名称：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CCSprite *btnCancel = [CCSprite spriteWithSpriteFrameName:NSLocalizedString(@<span class="string">"BtnCancel"</span>, nil)];  </span><br><span class="line">btnCancel.position=ccp(s.width/<span class="number">2</span>,s.height/<span class="number">2</span>-<span class="number">40</span>);  </span><br><span class="line">[self addChild:btnCancel z:<span class="number">2</span> tag:<span class="number">104</span>];</span><br></pre></td></tr></table></figure>
+<p>第二种就比较正规化了：点中你要本地化的图片，如<code>icon.png</code>，然后XCode-&gt; View-&gt; Utilities -&gt; File Inspector，在<code>Localization</code>中点“+”添加chinese （zh－Hans）；在图片左边就会出现一个倒三角，点开就会出现（english）和（chinese）的2张图，并且在项目文件夹中会出现en.lproj文件和zh-Hans.lproj文件；en.lproj文件存放的是英文版图片，zh-Hans.lproj存放的是中文版图片，中英文图片名字一样，<code>我们在文件夹中直接替换图片就可以了</code>，最后使用时直接使用正常名字就行了，如：“icon.png”。</p>
+<h2 id="本地化其他文件">本地化其他文件</h2><p>本地化其他文件和本地化图片第二种方法类似，先在Localization中添加语言，然后把对应版本拷贝到en.lproj和zh-Hans.lproj文件夹中，最后引用就行了。</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2015/05/25/internationalization/" data-id="ciy061u46000ye2wi2ru0rvy6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2015/05/27/PureLayout/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            使用PureLayout进行自动布局
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2015/05/22/performAND-dispatch/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">iOS 中的多线程</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/13/aboutuploadAppstoreProblem/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/1F91FE85-B2FC-46A2-B73D-6652DFAD856D.png?imageView2/1/w/600/h/200)" alt="上传 Appstore 错误 - ERROR ITMS-90168" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/12/13/aboutuploadAppstoreProblem/" class="title">上传 Appstore 错误 - ERROR ITMS-90168</a></p>
+                            <p class="item-date"><time datetime="2016-12-13T01:24:31.000Z" itemprop="datePublished">2016-12-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/05/lookmoviewforyousname/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/lookmoviewforyousname1.png?imageView2/1/w/600/h/200)" alt="你的名字观后感" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/生活感悟/">生活感悟</a></p>
+                            <p class="item-title"><a href="/2016/12/05/lookmoviewforyousname/" class="title">你的名字观后感</a></p>
+                            <p class="item-date"><time datetime="2016-12-05T14:52:48.000Z" itemprop="datePublished">2016-12-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/05/xcodelins/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/xcodelins.png?imageView2/1/w/600/h/200)" alt="统计整个Xcode工程代码行数" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/12/05/xcodelins/" class="title">统计整个Xcode工程代码行数</a></p>
+                            <p class="item-date"><time datetime="2016-12-05T06:20:48.000Z" itemprop="datePublished">2016-12-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/02/17/Storyboard-References/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/gifblog_large_ios_automate_storyboard.jpg?imageView2/1/w/600/h/200)" alt="iOS9新特性Storyboard References" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2016/02/17/Storyboard-References/" class="title">iOS9新特性Storyboard References</a></p>
+                            <p class="item-date"><time datetime="2016-02-17T01:48:47.000Z" itemprop="datePublished">2016-02-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2015/12/24/StaticLibary/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://7xisto.com1.z0.glb.clouddn.com/F0093439-EBF0-40F1-B810-6D7BF25B7D9B.png?imageView2/1/w/600/h/200)" alt="iOS中静态库-.a文件生成和使用" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS开发/">iOS开发</a></p>
+                            <p class="item-title"><a href="/2015/12/24/StaticLibary/" class="title">iOS中静态库-.a文件生成和使用</a></p>
+                            <p class="item-date"><time datetime="2015-12-24T14:45:18.000Z" itemprop="datePublished">2015-12-24</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo使用指南/">Hexo使用指南</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/成长之路/">成长之路</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Appstore/">Appstore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CoreData/">CoreData</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DLNA/">DLNA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git的使用/">Git的使用</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/References/">References</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/block的使用/">block的使用</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS优化/">iOS优化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS常用宏/">iOS常用宏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios-调试/">ios 调试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/你的名字/">你的名字</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客介绍/">博客介绍</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客使用/">博客使用</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际化/">国际化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/声波传输/">声波传输</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多线程/">多线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源库和第三方/">开源库和第三方</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自动布局/">自动布局</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态库/">静态库</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Appstore/" style="font-size: 10px;">Appstore</a> <a href="/tags/CoreData/" style="font-size: 10px;">CoreData</a> <a href="/tags/DLNA/" style="font-size: 10px;">DLNA</a> <a href="/tags/Git的使用/" style="font-size: 15px;">Git的使用</a> <a href="/tags/References/" style="font-size: 10px;">References</a> <a href="/tags/Xcode/" style="font-size: 15px;">Xcode</a> <a href="/tags/block的使用/" style="font-size: 10px;">block的使用</a> <a href="/tags/iOS优化/" style="font-size: 10px;">iOS优化</a> <a href="/tags/iOS常用宏/" style="font-size: 10px;">iOS常用宏</a> <a href="/tags/ios-调试/" style="font-size: 10px;">ios 调试</a> <a href="/tags/你的名字/" style="font-size: 10px;">你的名字</a> <a href="/tags/动画/" style="font-size: 10px;">动画</a> <a href="/tags/博客介绍/" style="font-size: 10px;">博客介绍</a> <a href="/tags/博客使用/" style="font-size: 20px;">博客使用</a> <a href="/tags/国际化/" style="font-size: 10px;">国际化</a> <a href="/tags/声波传输/" style="font-size: 10px;">声波传输</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/开源库和第三方/" style="font-size: 10px;">开源库和第三方</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/自动布局/" style="font-size: 10px;">自动布局</a> <a href="/tags/静态库/" style="font-size: 10px;">静态库</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Rookie</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2015/05/25/internationalization/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js" type="text/javascript"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
+</html>
