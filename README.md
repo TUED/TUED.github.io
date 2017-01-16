@@ -1,2 +1,0 @@
-# TUED.github.io
-blog
